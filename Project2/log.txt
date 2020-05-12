@@ -1,0 +1,741 @@
+// Abram Fouts - abfouts@pdx.edu
+// Zoe DeFreitas - zcd2@pdx.edu
+Project 2:
+
+PROBLEM 1
+
+time=                   5 INPUT = r1 = x, r2 = x, r3 = x
+time=                   5 OUTPUT = d2 = 0, d1 = 0, n = 1, u1 = 0, u2 = 0 
+time=                   5 OUTPUT(moore) = d2 = 0, d1 = 1, n = 1, u1 = 1, u2 = 1 
+time=                  15 INPUT = r1 = x, r2 = x, r3 = x
+time=                  15 OUTPUT = d2 = 0, d1 = 0, n = 1, u1 = 0, u2 = 0 
+time=                  15 OUTPUT(moore) = d2 = 0, d1 = 1, n = 1, u1 = 1, u2 = 1 
+time=                  25 INPUT = r1 = 0, r2 = 0, r3 = 0
+time=                  25 OUTPUT = d2 = 0, d1 = 0, n = 1, u1 = 0, u2 = 0 
+time=                  25 OUTPUT(moore) = d2 = 0, d1 = 1, n = 1, u1 = 1, u2 = 1 
+time=                  35 INPUT = r1 = 0, r2 = 0, r3 = 0
+time=                  35 OUTPUT = d2 = 0, d1 = 0, n = 1, u1 = 0, u2 = 0 
+time=                  35 OUTPUT(moore) = d2 = 0, d1 = 1, n = 1, u1 = 1, u2 = 1 
+time=                  45 INPUT = r1 = 1, r2 = 0, r3 = 0
+time=                  45 OUTPUT = d2 = 0, d1 = 0, n = 1, u1 = 0, u2 = 0 
+time=                  45 OUTPUT(moore) = d2 = 0, d1 = 1, n = 1, u1 = 1, u2 = 1 
+time=                  55 INPUT = r1 = 0, r2 = 0, r3 = 1
+time=                  55 OUTPUT = d2 = 0, d1 = 0, n = 0, u1 = 0, u2 = 1 
+time=                  55 OUTPUT(moore) = d2 = 1, d1 = 1, n = 0, u1 = 1, u2 = 1 
+time=                  65 INPUT = r1 = 0, r2 = 0, r3 = 1
+time=                  65 OUTPUT = d2 = 0, d1 = 0, n = 1, u1 = 0, u2 = 0 
+time=                  65 OUTPUT(moore) = d2 = 1, d1 = 1, n = 1, u1 = 1, u2 = 0 
+time=                  75 INPUT = r1 = 0, r2 = 1, r3 = 1
+time=                  75 OUTPUT = d2 = 0, d1 = 1, n = 0, u1 = 0, u2 = 0 
+time=                  75 OUTPUT(moore) = d2 = 1, d1 = 1, n = 0, u1 = 1, u2 = 1 
+time=                  85 INPUT = r1 = 1, r2 = 0, r3 = 1
+time=                  85 OUTPUT = d2 = 0, d1 = 1, n = 0, u1 = 0, u2 = 0 
+time=                  85 OUTPUT(moore) = d2 = 1, d1 = 1, n = 0, u1 = 1, u2 = 1 
+time=                  95 INPUT = r1 = 1, r2 = 0, r3 = 1
+time=                  95 OUTPUT = d2 = 0, d1 = 0, n = 0, u1 = 0, u2 = 1 
+time=                  95 OUTPUT(moore) = d2 = 1, d1 = 1, n = 0, u1 = 1, u2 = 1 
+time=                 105 INPUT = r1 = 1, r2 = 0, r3 = 1
+time=                 105 OUTPUT = d2 = 1, d1 = 0, n = 0, u1 = 0, u2 = 0 
+time=                 105 OUTPUT(moore) = d2 = 1, d1 = 1, n = 0, u1 = 1, u2 = 1 
+time=                 115 INPUT = r1 = 0, r2 = 1, r3 = 0
+time=                 115 OUTPUT = d2 = 0, d1 = 0, n = 0, u1 = 1, u2 = 0 
+time=                 115 OUTPUT(moore) = d2 = 1, d1 = 1, n = 0, u1 = 1, u2 = 1 
+time=                 125 INPUT = r1 = 0, r2 = 0, r3 = 1
+time=                 125 OUTPUT = d2 = 0, d1 = 0, n = 0, u1 = 1, u2 = 0 
+time=                 125 OUTPUT(moore) = d2 = 1, d1 = 0, n = 1, u1 = 1, u2 = 1 
+time=                 135 INPUT = r1 = 1, r2 = 0, r3 = 1
+time=                 135 OUTPUT = d2 = 1, d1 = 0, n = 0, u1 = 0, u2 = 0 
+time=                 135 OUTPUT(moore) = d2 = 1, d1 = 1, n = 1, u1 = 0, u2 = 1 
+time=                 145 INPUT = r1 = 1, r2 = 1, r3 = 0
+time=                 145 OUTPUT = d2 = 0, d1 = 0, n = 0, u1 = 1, u2 = 0 
+time=                 145 OUTPUT(moore) = d2 = 1, d1 = 1, n = 0, u1 = 1, u2 = 1 
+time=                 155 INPUT = r1 = 1, r2 = 0, r3 = 1
+time=                 155 OUTPUT = d2 = 0, d1 = 1, n = 0, u1 = 0, u2 = 0 
+time=                 155 OUTPUT(moore) = d2 = 1, d1 = 0, n = 1, u1 = 1, u2 = 1 
+time=                 165 INPUT = r1 = 1, r2 = 0, r3 = 1
+time=                 165 OUTPUT = d2 = 0, d1 = 0, n = 0, u1 = 0, u2 = 1 
+time=                 165 OUTPUT(moore) = d2 = 1, d1 = 1, n = 1, u1 = 0, u2 = 1 
+time=                 175 INPUT = r1 = 1, r2 = 0, r3 = 0
+time=                 175 OUTPUT = d2 = 1, d1 = 0, n = 0, u1 = 0, u2 = 0 
+time=                 175 OUTPUT(moore) = d2 = 1, d1 = 1, n = 0, u1 = 1, u2 = 1 
+time=                 185 INPUT = r1 = 0, r2 = 0, r3 = 1
+time=                 185 OUTPUT = d2 = 0, d1 = 0, n = 0, u1 = 0, u2 = 1 
+time=                 185 OUTPUT(moore) = d2 = 0, d1 = 1, n = 1, u1 = 1, u2 = 1 
+time=                 195 INPUT = r1 = 1, r2 = 1, r3 = 0
+time=                 195 OUTPUT = d2 = 0, d1 = 1, n = 0, u1 = 0, u2 = 0 
+time=                 195 OUTPUT(moore) = d2 = 1, d1 = 1, n = 1, u1 = 1, u2 = 0 
+time=                 205 INPUT = r1 = 1, r2 = 0, r3 = 1
+time=                 205 OUTPUT = d2 = 0, d1 = 1, n = 0, u1 = 0, u2 = 0 
+time=                 205 OUTPUT(moore) = d2 = 1, d1 = 0, n = 1, u1 = 1, u2 = 1 
+time=                 215 INPUT = r1 = 0, r2 = 1, r3 = 0
+time=                 215 OUTPUT = d2 = 0, d1 = 0, n = 0, u1 = 1, u2 = 0 
+time=                 215 OUTPUT(moore) = d2 = 1, d1 = 1, n = 1, u1 = 0, u2 = 1 
+time=                 225 INPUT = r1 = 1, r2 = 0, r3 = 1
+time=                 225 OUTPUT = d2 = 0, d1 = 1, n = 0, u1 = 0, u2 = 0 
+time=                 225 OUTPUT(moore) = d2 = 1, d1 = 0, n = 1, u1 = 1, u2 = 1 
+time=                 235 INPUT = r1 = 1, r2 = 1, r3 = 1
+time=                 235 OUTPUT = d2 = 0, d1 = 0, n = 0, u1 = 1, u2 = 0 
+time=                 235 OUTPUT(moore) = d2 = 1, d1 = 1, n = 1, u1 = 0, u2 = 1 
+time=                 245 INPUT = r1 = 0, r2 = 1, r3 = 0
+time=                 245 OUTPUT = d2 = 0, d1 = 0, n = 1, u1 = 0, u2 = 0 
+time=                 245 OUTPUT(moore) = d2 = 1, d1 = 1, n = 0, u1 = 1, u2 = 1 
+time=                 255 INPUT = r1 = 1, r2 = 1, r3 = 1
+time=                 255 OUTPUT = d2 = 0, d1 = 1, n = 0, u1 = 0, u2 = 0 
+time=                 255 OUTPUT(moore) = d2 = 1, d1 = 0, n = 1, u1 = 1, u2 = 1 
+time=                 265 INPUT = r1 = 0, r2 = 1, r3 = 0
+time=                 265 OUTPUT = d2 = 0, d1 = 0, n = 0, u1 = 1, u2 = 0 
+time=                 265 OUTPUT(moore) = d2 = 1, d1 = 1, n = 1, u1 = 0, u2 = 1 
+time=                 275 INPUT = r1 = 1, r2 = 1, r3 = 0
+time=                 275 OUTPUT = d2 = 0, d1 = 1, n = 0, u1 = 0, u2 = 0 
+time=                 275 OUTPUT(moore) = d2 = 1, d1 = 0, n = 1, u1 = 1, u2 = 1 
+
+
+PROBLEM 2
+
+time=                 115 DATAIN = 10000001 :: 10010101 :: NOT MATCHED
+time=                 145 DATAIN = 10000001 :: 10010101 :: NOT MATCHED
+time=                 175 DATAIN = 00001001 :: 10010101 :: NOT MATCHED
+time=                 205 DATAIN = 00001001 :: 10010101 :: NOT MATCHED
+time=                 225 DATAIN = 01100011 :: 10010101 :: NOT MATCHED
+time=                 265 DATAIN = 00001101 :: 10010101 :: NOT MATCHED
+time=                 305 DATAIN = 10001101 :: 10010101 :: NOT MATCHED
+time=                 355 DATAIN = 01100101 :: 10010101 :: NOT MATCHED
+time=                 405 DATAIN = 01100101 :: 10010101 :: NOT MATCHED
+time=                 455 DATAIN = 00000001 :: 10010101 :: NOT MATCHED
+time=                 485 DATAIN = 00000001 :: 10010101 :: NOT MATCHED
+time=                 525 DATAIN = 00001101 :: 10010101 :: NOT MATCHED
+time=                 585 DATAIN = 00111101 :: 10010101 :: NOT MATCHED
+time=                 625 DATAIN = 11101101 :: 10010101 :: NOT MATCHED
+time=                 675 DATAIN = 11111001 :: 10010101 :: NOT MATCHED
+time=                 705 DATAIN = 11111001 :: 10010101 :: NOT MATCHED
+time=                 775 DATAIN = 11000101 :: 10010101 :: NOT MATCHED
+time=                 825 DATAIN = 11000101 :: 10010101 :: NOT MATCHED
+time=                 895 DATAIN = 11100101 :: 10010101 :: NOT MATCHED
+time=                 945 DATAIN = 11100101 :: 10010101 :: NOT MATCHED
+time=                 965 DATAIN = 01110111 :: 10010101 :: NOT MATCHED
+time=                1005 DATAIN = 10001111 :: 10010101 :: NOT MATCHED
+time=                1115 DATAIN = 11000101 :: 10010101 :: NOT MATCHED
+time=                1165 DATAIN = 11000101 :: 10010101 :: NOT MATCHED
+time=                1225 DATAIN = 10111101 :: 10010101 :: NOT MATCHED
+time=                1265 DATAIN = 00101101 :: 10010101 :: NOT MATCHED
+time=                1315 DATAIN = 01100101 :: 10010101 :: NOT MATCHED
+time=                1365 DATAIN = 01100101 :: 10010101 :: NOT MATCHED
+time=                1385 DATAIN = 01100011 :: 10010101 :: NOT MATCHED
+time=                1505 DATAIN = 10011101 :: 10010101 :: NOT MATCHED
+time=                1545 DATAIN = 00010011 :: 10010101 :: NOT MATCHED
+time=                1585 DATAIN = 00001101 :: 10010101 :: NOT MATCHED
+time=                1605 DATAIN = 01010011 :: 10010101 :: NOT MATCHED
+time=                1625 DATAIN = 01101011 :: 10010101 :: NOT MATCHED
+time=                1695 DATAIN = 11010101 :: 10010101 :: NOT MATCHED
+time=                1765 DATAIN = 11010101 :: 10010101 :: NOT MATCHED
+time=                1845 DATAIN = 00011101 :: 10010101 :: NOT MATCHED
+time=                1865 DATAIN = 11001111 :: 10010101 :: NOT MATCHED
+time=                1885 DATAIN = 00100011 :: 10010101 :: NOT MATCHED
+time=                2015 DATAIN = 01000001 :: 10010101 :: NOT MATCHED
+time=                2045 DATAIN = 01000001 :: 10010101 :: NOT MATCHED
+time=                2115 DATAIN = 10001001 :: 10010101 :: NOT MATCHED
+time=                2145 DATAIN = 10001001 :: 10010101 :: NOT MATCHED
+time=                2165 DATAIN = 11101011 :: 10010101 :: NOT MATCHED
+time=                2285 DATAIN = 00001011 :: 10010101 :: NOT MATCHED
+time=                2315 DATAIN = 01110001 :: 10010101 :: NOT MATCHED
+time=                2345 DATAIN = 01110001 :: 10010101 :: NOT MATCHED
+time=                2395 DATAIN = 10000101 :: 10010101 :: NOT MATCHED
+time=                2445 DATAIN = 10000101 :: 10010101 :: NOT MATCHED
+time=                2465 DATAIN = 01001111 :: 10010101 :: NOT MATCHED
+time=                2485 DATAIN = 00111011 :: 10010101 :: NOT MATCHED
+time=                2605 DATAIN = 00010101 :: 10010101 :: NOT MATCHED
+time=                2635 DATAIN = 11110001 :: 10010101 :: NOT MATCHED
+time=                2665 DATAIN = 11110001 :: 10010101 :: NOT MATCHED
+time=                2695 DATAIN = 11011001 :: 10010101 :: NOT MATCHED
+time=                2725 DATAIN = 11011001 :: 10010101 :: NOT MATCHED
+time=                2785 DATAIN = 10011111 :: 10010101 :: NOT MATCHED
+time=                2805 DATAIN = 10001111 :: 10010101 :: NOT MATCHED
+time=                2845 DATAIN = 10110111 :: 10010101 :: NOT MATCHED
+time=                2865 DATAIN = 10011111 :: 10010101 :: NOT MATCHED
+time=                2905 DATAIN = 01011011 :: 10010101 :: NOT MATCHED
+time=                2935 DATAIN = 10001001 :: 10010101 :: NOT MATCHED
+time=                2965 DATAIN = 10001001 :: 10010101 :: NOT MATCHED
+time=                2995 DATAIN = 01001001 :: 10010101 :: NOT MATCHED
+time=                3025 DATAIN = 01001001 :: 10010101 :: NOT MATCHED
+time=                3065 DATAIN = 11010111 :: 10010101 :: NOT MATCHED
+time=                3095 DATAIN = 01010001 :: 10010101 :: NOT MATCHED
+time=                3125 DATAIN = 01010001 :: 10010101 :: NOT MATCHED
+time=                3225 DATAIN = 01110111 :: 10010101 :: NOT MATCHED
+time=                3265 DATAIN = 00111101 :: 10010101 :: NOT MATCHED
+time=                3345 DATAIN = 01101101 :: 10010101 :: NOT MATCHED
+time=                3375 DATAIN = 00111001 :: 10010101 :: NOT MATCHED
+time=                3405 DATAIN = 00111001 :: 10010101 :: NOT MATCHED
+time=                3425 DATAIN = 00011111 :: 10010101 :: NOT MATCHED
+time=                3445 DATAIN = 11010011 :: 10010101 :: NOT MATCHED
+time=                3495 DATAIN = 10000101 :: 10010101 :: NOT MATCHED
+time=                3545 DATAIN = 10000101 :: 10010101 :: NOT MATCHED
+time=                3585 DATAIN = 01011011 :: 10010101 :: NOT MATCHED
+time=                3615 DATAIN = 01001001 :: 10010101 :: NOT MATCHED
+time=                3645 DATAIN = 01001001 :: 10010101 :: NOT MATCHED
+time=                3665 DATAIN = 00111111 :: 10010101 :: NOT MATCHED
+time=                3825 DATAIN = 01110011 :: 10010101 :: NOT MATCHED
+time=                3845 DATAIN = 10100011 :: 10010101 :: NOT MATCHED
+time=                3865 DATAIN = 00101111 :: 10010101 :: NOT MATCHED
+time=                3885 DATAIN = 10110011 :: 10010101 :: NOT MATCHED
+time=                3905 DATAIN = 01011111 :: 10010101 :: NOT MATCHED
+time=                3945 DATAIN = 11110111 :: 10010101 :: NOT MATCHED
+time=                3965 DATAIN = 11001011 :: 10010101 :: NOT MATCHED
+time=                4035 DATAIN = 00101001 :: 10010101 :: NOT MATCHED
+time=                4065 DATAIN = 00101001 :: 10010101 :: NOT MATCHED
+time=                4105 DATAIN = 11101101 :: 10010101 :: NOT MATCHED
+time=                4175 DATAIN = 01100101 :: 10010101 :: NOT MATCHED
+time=                4225 DATAIN = 01100101 :: 10010101 :: NOT MATCHED
+time=                4285 DATAIN = 10110101 :: 10010101 :: NOT MATCHED
+time=                4305 DATAIN = 11011111 :: 10010101 :: NOT MATCHED
+time=                4335 DATAIN = 01111001 :: 10010101 :: NOT MATCHED
+time=                4365 DATAIN = 01111001 :: 10010101 :: NOT MATCHED
+time=                4445 DATAIN = 10101011 :: 10010101 :: NOT MATCHED
+time=                4545 DATAIN = 11111101 :: 10010101 :: NOT MATCHED
+time=                4565 DATAIN = 11000011 :: 10010101 :: NOT MATCHED
+time=                4625 DATAIN = 01100111 :: 10010101 :: NOT MATCHED
+time=                4715 DATAIN = 01111001 :: 10010101 :: NOT MATCHED
+time=                4745 DATAIN = 01111001 :: 10010101 :: NOT MATCHED
+time=                4805 DATAIN = 10010011 :: 10010101 :: NOT MATCHED
+time=                4855 DATAIN = 01011001 :: 10010101 :: NOT MATCHED
+time=                4885 DATAIN = 01011001 :: 10010101 :: NOT MATCHED
+time=                4905 DATAIN = 11011011 :: 10010101 :: NOT MATCHED
+time=                4945 DATAIN = 01001101 :: 10010101 :: NOT MATCHED
+time=                4975 DATAIN = 11011001 :: 10010101 :: NOT MATCHED
+time=                5005 DATAIN = 11011001 :: 10010101 :: NOT MATCHED
+time=                5045 DATAIN = 01101101 :: 10010101 :: NOT MATCHED
+time=                5185 DATAIN = 10010101 :: 10010101 :: MATCHED
+time=                5245 DATAIN = 11110111 :: 10010101 :: NOT MATCHED
+time=                5275 DATAIN = 01101001 :: 10010101 :: NOT MATCHED
+time=                5305 DATAIN = 01101001 :: 10010101 :: NOT MATCHED
+time=                5405 DATAIN = 00101101 :: 10010101 :: NOT MATCHED
+time=                5425 DATAIN = 11000111 :: 10010101 :: NOT MATCHED
+time=                5525 DATAIN = 11111101 :: 10010101 :: NOT MATCHED
+time=                5555 DATAIN = 00101001 :: 10010101 :: NOT MATCHED
+time=                5585 DATAIN = 00101001 :: 10010101 :: NOT MATCHED
+time=                5685 DATAIN = 00111101 :: 10010101 :: NOT MATCHED
+time=                5745 DATAIN = 01110011 :: 10010101 :: NOT MATCHED
+time=                5875 DATAIN = 11010101 :: 10010101 :: NOT MATCHED
+time=                5945 DATAIN = 11010101 :: 10010101 :: NOT MATCHED
+time=                5995 DATAIN = 10111001 :: 10010101 :: NOT MATCHED
+time=                6025 DATAIN = 10111001 :: 10010101 :: NOT MATCHED
+time=                6045 DATAIN = 00110111 :: 10010101 :: NOT MATCHED
+time=                6165 DATAIN = 01111101 :: 10010101 :: NOT MATCHED
+time=                6265 DATAIN = 11011011 :: 10010101 :: NOT MATCHED
+time=                6285 DATAIN = 11001111 :: 10010101 :: NOT MATCHED
+time=                6315 DATAIN = 01111001 :: 10010101 :: NOT MATCHED
+time=                6345 DATAIN = 01111001 :: 10010101 :: NOT MATCHED
+time=                6395 DATAIN = 01100001 :: 10010101 :: NOT MATCHED
+time=                6425 DATAIN = 01100001 :: 10010101 :: NOT MATCHED
+time=                6445 DATAIN = 00010111 :: 10010101 :: NOT MATCHED
+time=                6475 DATAIN = 10100001 :: 10010101 :: NOT MATCHED
+time=                6505 DATAIN = 10100001 :: 10010101 :: NOT MATCHED
+time=                6605 DATAIN = 11110101 :: 10010101 :: NOT MATCHED
+time=                6665 DATAIN = 00110101 :: 10010101 :: NOT MATCHED
+time=                6695 DATAIN = 00101001 :: 10010101 :: NOT MATCHED
+time=                6725 DATAIN = 00101001 :: 10010101 :: NOT MATCHED
+time=                6755 DATAIN = 11000001 :: 10010101 :: NOT MATCHED
+time=                6785 DATAIN = 11000001 :: 10010101 :: NOT MATCHED
+time=                6835 DATAIN = 11000101 :: 10010101 :: NOT MATCHED
+time=                6885 DATAIN = 11000101 :: 10010101 :: NOT MATCHED
+time=                6925 DATAIN = 01001011 :: 10010101 :: NOT MATCHED
+time=                6945 DATAIN = 01110011 :: 10010101 :: NOT MATCHED
+time=                7055 DATAIN = 10101001 :: 10010101 :: NOT MATCHED
+time=                7085 DATAIN = 10101001 :: 10010101 :: NOT MATCHED
+time=                7115 DATAIN = 10100001 :: 10010101 :: NOT MATCHED
+time=                7145 DATAIN = 10100001 :: 10010101 :: NOT MATCHED
+time=                7205 DATAIN = 10011111 :: 10010101 :: NOT MATCHED
+time=                7285 DATAIN = 10001101 :: 10010101 :: NOT MATCHED
+time=                7355 DATAIN = 01111001 :: 10010101 :: NOT MATCHED
+time=                7385 DATAIN = 01111001 :: 10010101 :: NOT MATCHED
+time=                7445 DATAIN = 00010011 :: 10010101 :: NOT MATCHED
+time=                7465 DATAIN = 01101011 :: 10010101 :: NOT MATCHED
+time=                7485 DATAIN = 11000111 :: 10010101 :: NOT MATCHED
+time=                7575 DATAIN = 10111001 :: 10010101 :: NOT MATCHED
+time=                7605 DATAIN = 10111001 :: 10010101 :: NOT MATCHED
+time=                7665 DATAIN = 01111111 :: 10010101 :: NOT MATCHED
+time=                7785 DATAIN = 10111101 :: 10010101 :: NOT MATCHED
+time=                7875 DATAIN = 10101001 :: 10010101 :: NOT MATCHED
+time=                7905 DATAIN = 10101001 :: 10010101 :: NOT MATCHED
+time=                7935 DATAIN = 10100001 :: 10010101 :: NOT MATCHED
+time=                7965 DATAIN = 10100001 :: 10010101 :: NOT MATCHED
+time=                8005 DATAIN = 11111011 :: 10010101 :: NOT MATCHED
+time=                8025 DATAIN = 00001011 :: 10010101 :: NOT MATCHED
+time=                8045 DATAIN = 11101111 :: 10010101 :: NOT MATCHED
+time=                8075 DATAIN = 11001001 :: 10010101 :: NOT MATCHED
+time=                8105 DATAIN = 11001001 :: 10010101 :: NOT MATCHED
+time=                8185 DATAIN = 01110101 :: 10010101 :: NOT MATCHED
+time=                8205 DATAIN = 10001111 :: 10010101 :: NOT MATCHED
+time=                8225 DATAIN = 01101011 :: 10010101 :: NOT MATCHED
+time=                8285 DATAIN = 10011011 :: 10010101 :: NOT MATCHED
+time=                8365 DATAIN = 00101101 :: 10010101 :: NOT MATCHED
+time=                8385 DATAIN = 01001011 :: 10010101 :: NOT MATCHED
+time=                8465 DATAIN = 00001101 :: 10010101 :: NOT MATCHED
+time=                8535 DATAIN = 11010001 :: 10010101 :: NOT MATCHED
+time=                8565 DATAIN = 11010001 :: 10010101 :: NOT MATCHED
+time=                8615 DATAIN = 01000001 :: 10010101 :: NOT MATCHED
+time=                8645 DATAIN = 01000001 :: 10010101 :: NOT MATCHED
+time=                8665 DATAIN = 00111011 :: 10010101 :: NOT MATCHED
+time=                8705 DATAIN = 01010011 :: 10010101 :: NOT MATCHED
+time=                8745 DATAIN = 01011011 :: 10010101 :: NOT MATCHED
+time=                8805 DATAIN = 01110011 :: 10010101 :: NOT MATCHED
+time=                8895 DATAIN = 00111001 :: 10010101 :: NOT MATCHED
+time=                8925 DATAIN = 00111001 :: 10010101 :: NOT MATCHED
+time=                8975 DATAIN = 11100101 :: 10010101 :: NOT MATCHED
+time=                9025 DATAIN = 11100101 :: 10010101 :: NOT MATCHED
+time=                9055 DATAIN = 10100001 :: 10010101 :: NOT MATCHED
+time=                9085 DATAIN = 10100001 :: 10010101 :: NOT MATCHED
+time=                9105 DATAIN = 00101011 :: 10010101 :: NOT MATCHED
+time=                9135 DATAIN = 10000001 :: 10010101 :: NOT MATCHED
+time=                9165 DATAIN = 10000001 :: 10010101 :: NOT MATCHED
+time=                9205 DATAIN = 00100111 :: 10010101 :: NOT MATCHED
+time=                9235 DATAIN = 10100001 :: 10010101 :: NOT MATCHED
+time=                9265 DATAIN = 10100001 :: 10010101 :: NOT MATCHED
+time=                9285 DATAIN = 00011111 :: 10010101 :: NOT MATCHED
+time=                9435 DATAIN = 10110001 :: 10010101 :: NOT MATCHED
+time=                9465 DATAIN = 10110001 :: 10010101 :: NOT MATCHED
+time=                9535 DATAIN = 01010101 :: 10010101 :: NOT MATCHED
+time=                9605 DATAIN = 01010101 :: 10010101 :: NOT MATCHED
+time=                9645 DATAIN = 11101101 :: 10010101 :: NOT MATCHED
+time=                9665 DATAIN = 00101011 :: 10010101 :: NOT MATCHED
+time=                9725 DATAIN = 11110101 :: 10010101 :: NOT MATCHED
+time=                9765 DATAIN = 10101101 :: 10010101 :: NOT MATCHED
+time=                9785 DATAIN = 00100111 :: 10010101 :: NOT MATCHED
+time=                9825 DATAIN = 10100111 :: 10010101 :: NOT MATCHED
+time=                9845 DATAIN = 11100111 :: 10010101 :: NOT MATCHED
+time=                9875 DATAIN = 10111001 :: 10010101 :: NOT MATCHED
+time=                9905 DATAIN = 10111001 :: 10010101 :: NOT MATCHED
+time=                9935 DATAIN = 01001001 :: 10010101 :: NOT MATCHED
+time=                9965 DATAIN = 01001001 :: 10010101 :: NOT MATCHED
+time=                9985 DATAIN = 11011011 :: 10010101 :: NOT MATCHED
+time=               10015 DATAIN = 11001001 :: 10010101 :: NOT MATCHED
+time=               10045 DATAIN = 11001001 :: 10010101 :: NOT MATCHED
+time=               10075 DATAIN = 01010001 :: 10010101 :: NOT MATCHED
+time=               10105 DATAIN = 01010001 :: 10010101 :: NOT MATCHED
+time=               10135 DATAIN = 10100001 :: 10010101 :: NOT MATCHED
+time=               10165 DATAIN = 10100001 :: 10010101 :: NOT MATCHED
+time=               10255 DATAIN = 01000101 :: 10010101 :: NOT MATCHED
+time=               10305 DATAIN = 01000101 :: 10010101 :: NOT MATCHED
+time=               10325 DATAIN = 10000011 :: 10010101 :: NOT MATCHED
+time=               10425 DATAIN = 01101111 :: 10010101 :: NOT MATCHED
+time=               10595 DATAIN = 11000101 :: 10010101 :: NOT MATCHED
+time=               10645 DATAIN = 11000101 :: 10010101 :: NOT MATCHED
+time=               10715 DATAIN = 00111001 :: 10010101 :: NOT MATCHED
+time=               10745 DATAIN = 00111001 :: 10010101 :: NOT MATCHED
+time=               10905 DATAIN = 00010101 :: 10010101 :: NOT MATCHED
+time=               10935 DATAIN = 11100001 :: 10010101 :: NOT MATCHED
+time=               10965 DATAIN = 11100001 :: 10010101 :: NOT MATCHED
+time=               10985 DATAIN = 00010111 :: 10010101 :: NOT MATCHED
+time=               11005 DATAIN = 01000011 :: 10010101 :: NOT MATCHED
+time=               11035 DATAIN = 11001001 :: 10010101 :: NOT MATCHED
+time=               11065 DATAIN = 11001001 :: 10010101 :: NOT MATCHED
+time=               11135 DATAIN = 00100101 :: 10010101 :: NOT MATCHED
+time=               11185 DATAIN = 00100101 :: 10010101 :: NOT MATCHED
+time=               11215 DATAIN = 11000001 :: 10010101 :: NOT MATCHED
+time=               11245 DATAIN = 11000001 :: 10010101 :: NOT MATCHED
+time=               11285 DATAIN = 10001101 :: 10010101 :: NOT MATCHED
+time=               11325 DATAIN = 00000111 :: 10010101 :: NOT MATCHED
+time=               11395 DATAIN = 01110001 :: 10010101 :: NOT MATCHED
+time=               11425 DATAIN = 01110001 :: 10010101 :: NOT MATCHED
+time=               11445 DATAIN = 00111011 :: 10010101 :: NOT MATCHED
+time=               11485 DATAIN = 11110111 :: 10010101 :: NOT MATCHED
+time=               11595 DATAIN = 01010101 :: 10010101 :: NOT MATCHED
+time=               11665 DATAIN = 01010101 :: 10010101 :: NOT MATCHED
+time=               11785 DATAIN = 11011101 :: 10010101 :: NOT MATCHED
+time=               11825 DATAIN = 00001101 :: 10010101 :: NOT MATCHED
+time=               11845 DATAIN = 01001011 :: 10010101 :: NOT MATCHED
+time=               11875 DATAIN = 01111001 :: 10010101 :: NOT MATCHED
+time=               11905 DATAIN = 01111001 :: 10010101 :: NOT MATCHED
+time=               11965 DATAIN = 11111101 :: 10010101 :: NOT MATCHED
+time=               11985 DATAIN = 01111011 :: 10010101 :: NOT MATCHED
+time=               12005 DATAIN = 10001111 :: 10010101 :: NOT MATCHED
+time=               12025 DATAIN = 00000011 :: 10010101 :: NOT MATCHED
+time=               12045 DATAIN = 11100011 :: 10010101 :: NOT MATCHED
+time=               12085 DATAIN = 00011101 :: 10010101 :: NOT MATCHED
+time=               12115 DATAIN = 10110001 :: 10010101 :: NOT MATCHED
+time=               12145 DATAIN = 10110001 :: 10010101 :: NOT MATCHED
+time=               12245 DATAIN = 10010101 :: 10010101 :: MATCHED
+time=               12305 DATAIN = 11101101 :: 10010101 :: NOT MATCHED
+time=               12385 DATAIN = 10001101 :: 10010101 :: NOT MATCHED
+time=               12505 DATAIN = 00010111 :: 10010101 :: NOT MATCHED
+time=               12645 DATAIN = 10001011 :: 10010101 :: NOT MATCHED
+time=               12715 DATAIN = 00100101 :: 10010101 :: NOT MATCHED
+time=               12765 DATAIN = 00100101 :: 10010101 :: NOT MATCHED
+time=               12835 DATAIN = 01001001 :: 10010101 :: NOT MATCHED
+time=               12865 DATAIN = 01001001 :: 10010101 :: NOT MATCHED
+time=               12925 DATAIN = 00111101 :: 10010101 :: NOT MATCHED
+time=               12945 DATAIN = 01001011 :: 10010101 :: NOT MATCHED
+time=               12985 DATAIN = 01000111 :: 10010101 :: NOT MATCHED
+time=               13035 DATAIN = 00111001 :: 10010101 :: NOT MATCHED
+time=               13065 DATAIN = 00111001 :: 10010101 :: NOT MATCHED
+time=               13165 DATAIN = 00000111 :: 10010101 :: NOT MATCHED
+time=               13215 DATAIN = 00010001 :: 10010101 :: NOT MATCHED
+time=               13245 DATAIN = 00010001 :: 10010101 :: NOT MATCHED
+time=               13285 DATAIN = 01001011 :: 10010101 :: NOT MATCHED
+time=               13305 DATAIN = 01110011 :: 10010101 :: NOT MATCHED
+time=               13345 DATAIN = 00100011 :: 10010101 :: NOT MATCHED
+time=               13395 DATAIN = 11001001 :: 10010101 :: NOT MATCHED
+time=               13425 DATAIN = 11001001 :: 10010101 :: NOT MATCHED
+time=               13455 DATAIN = 00111001 :: 10010101 :: NOT MATCHED
+time=               13485 DATAIN = 00111001 :: 10010101 :: NOT MATCHED
+time=               13505 DATAIN = 11011111 :: 10010101 :: NOT MATCHED
+time=               13545 DATAIN = 01100111 :: 10010101 :: NOT MATCHED
+time=               13585 DATAIN = 10011101 :: 10010101 :: NOT MATCHED
+time=               13655 DATAIN = 01001001 :: 10010101 :: NOT MATCHED
+time=               13685 DATAIN = 01001001 :: 10010101 :: NOT MATCHED
+time=               13715 DATAIN = 11011001 :: 10010101 :: NOT MATCHED
+time=               13745 DATAIN = 11011001 :: 10010101 :: NOT MATCHED
+time=               13805 DATAIN = 10010011 :: 10010101 :: NOT MATCHED
+time=               13825 DATAIN = 11100011 :: 10010101 :: NOT MATCHED
+time=               13905 DATAIN = 01011101 :: 10010101 :: NOT MATCHED
+time=               13965 DATAIN = 00101011 :: 10010101 :: NOT MATCHED
+time=               13995 DATAIN = 00111001 :: 10010101 :: NOT MATCHED
+time=               14025 DATAIN = 00111001 :: 10010101 :: NOT MATCHED
+time=               14095 DATAIN = 01011001 :: 10010101 :: NOT MATCHED
+time=               14125 DATAIN = 01011001 :: 10010101 :: NOT MATCHED
+time=               14185 DATAIN = 10010111 :: 10010101 :: NOT MATCHED
+time=               14205 DATAIN = 11011011 :: 10010101 :: NOT MATCHED
+time=               14245 DATAIN = 10111011 :: 10010101 :: NOT MATCHED
+time=               14285 DATAIN = 00001111 :: 10010101 :: NOT MATCHED
+time=               14315 DATAIN = 01101001 :: 10010101 :: NOT MATCHED
+time=               14345 DATAIN = 01101001 :: 10010101 :: NOT MATCHED
+time=               14395 DATAIN = 01011001 :: 10010101 :: NOT MATCHED
+time=               14425 DATAIN = 01011001 :: 10010101 :: NOT MATCHED
+time=               14475 DATAIN = 11000101 :: 10010101 :: NOT MATCHED
+time=               14525 DATAIN = 11000101 :: 10010101 :: NOT MATCHED
+time=               14545 DATAIN = 11001111 :: 10010101 :: NOT MATCHED
+time=               14595 DATAIN = 01010001 :: 10010101 :: NOT MATCHED
+time=               14625 DATAIN = 01010001 :: 10010101 :: NOT MATCHED
+time=               14655 DATAIN = 01101001 :: 10010101 :: NOT MATCHED
+time=               14685 DATAIN = 01101001 :: 10010101 :: NOT MATCHED
+time=               14705 DATAIN = 01110111 :: 10010101 :: NOT MATCHED
+time=               14765 DATAIN = 10011011 :: 10010101 :: NOT MATCHED
+time=               14825 DATAIN = 10110111 :: 10010101 :: NOT MATCHED
+time=               14885 DATAIN = 01110111 :: 10010101 :: NOT MATCHED
+time=               14945 DATAIN = 10110101 :: 10010101 :: NOT MATCHED
+time=               14985 DATAIN = 00000111 :: 10010101 :: NOT MATCHED
+time=               15035 DATAIN = 11101001 :: 10010101 :: NOT MATCHED
+time=               15065 DATAIN = 11101001 :: 10010101 :: NOT MATCHED
+time=               15085 DATAIN = 10001011 :: 10010101 :: NOT MATCHED
+time=               15115 DATAIN = 00000001 :: 10010101 :: NOT MATCHED
+time=               15145 DATAIN = 00000001 :: 10010101 :: NOT MATCHED
+time=               15165 DATAIN = 11011011 :: 10010101 :: NOT MATCHED
+time=               15255 DATAIN = 11000101 :: 10010101 :: NOT MATCHED
+time=               15305 DATAIN = 11000101 :: 10010101 :: NOT MATCHED
+time=               15345 DATAIN = 10101111 :: 10010101 :: NOT MATCHED
+time=               15385 DATAIN = 10101111 :: 10010101 :: NOT MATCHED
+time=               15415 DATAIN = 11101001 :: 10010101 :: NOT MATCHED
+time=               15445 DATAIN = 11101001 :: 10010101 :: NOT MATCHED
+time=               15505 DATAIN = 11101111 :: 10010101 :: NOT MATCHED
+time=               15535 DATAIN = 11100001 :: 10010101 :: NOT MATCHED
+time=               15565 DATAIN = 11100001 :: 10010101 :: NOT MATCHED
+time=               15645 DATAIN = 10010101 :: 10010101 :: MATCHED
+time=               15735 DATAIN = 11100101 :: 10010101 :: NOT MATCHED
+time=               15785 DATAIN = 11100101 :: 10010101 :: NOT MATCHED
+time=               15855 DATAIN = 00101001 :: 10010101 :: NOT MATCHED
+time=               15885 DATAIN = 00101001 :: 10010101 :: NOT MATCHED
+time=               15915 DATAIN = 11100001 :: 10010101 :: NOT MATCHED
+time=               15945 DATAIN = 11100001 :: 10010101 :: NOT MATCHED
+time=               15965 DATAIN = 01110111 :: 10010101 :: NOT MATCHED
+time=               16015 DATAIN = 10000001 :: 10010101 :: NOT MATCHED
+time=               16045 DATAIN = 10000001 :: 10010101 :: NOT MATCHED
+time=               16115 DATAIN = 11010101 :: 10010101 :: NOT MATCHED
+time=               16185 DATAIN = 11010101 :: 10010101 :: NOT MATCHED
+time=               16265 DATAIN = 00001111 :: 10010101 :: NOT MATCHED
+time=               16295 DATAIN = 11110001 :: 10010101 :: NOT MATCHED
+time=               16325 DATAIN = 11110001 :: 10010101 :: NOT MATCHED
+time=               16365 DATAIN = 01111101 :: 10010101 :: NOT MATCHED
+time=               16455 DATAIN = 10101001 :: 10010101 :: NOT MATCHED
+time=               16485 DATAIN = 10101001 :: 10010101 :: NOT MATCHED
+time=               16505 DATAIN = 11101111 :: 10010101 :: NOT MATCHED
+time=               16525 DATAIN = 01011011 :: 10010101 :: NOT MATCHED
+time=               16545 DATAIN = 10101111 :: 10010101 :: NOT MATCHED
+time=               16595 DATAIN = 10111001 :: 10010101 :: NOT MATCHED
+time=               16625 DATAIN = 10111001 :: 10010101 :: NOT MATCHED
+time=               16645 DATAIN = 00010011 :: 10010101 :: NOT MATCHED
+time=               16665 DATAIN = 00010011 :: 10010101 :: NOT MATCHED
+time=               16715 DATAIN = 01100101 :: 10010101 :: NOT MATCHED
+time=               16765 DATAIN = 01100101 :: 10010101 :: NOT MATCHED
+time=               16795 DATAIN = 01010001 :: 10010101 :: NOT MATCHED
+time=               16825 DATAIN = 01010001 :: 10010101 :: NOT MATCHED
+time=               16845 DATAIN = 10110111 :: 10010101 :: NOT MATCHED
+time=               16875 DATAIN = 10011001 :: 10010101 :: NOT MATCHED
+time=               16905 DATAIN = 10011001 :: 10010101 :: NOT MATCHED
+time=               16955 DATAIN = 01110001 :: 10010101 :: NOT MATCHED
+time=               16985 DATAIN = 01110001 :: 10010101 :: NOT MATCHED
+time=               17085 DATAIN = 01111101 :: 10010101 :: NOT MATCHED
+time=               17115 DATAIN = 01011001 :: 10010101 :: NOT MATCHED
+time=               17145 DATAIN = 01011001 :: 10010101 :: NOT MATCHED
+time=               17195 DATAIN = 11100101 :: 10010101 :: NOT MATCHED
+time=               17245 DATAIN = 11100101 :: 10010101 :: NOT MATCHED
+time=               17285 DATAIN = 11101101 :: 10010101 :: NOT MATCHED
+time=               17315 DATAIN = 11001001 :: 10010101 :: NOT MATCHED
+time=               17345 DATAIN = 11001001 :: 10010101 :: NOT MATCHED
+time=               17375 DATAIN = 01000001 :: 10010101 :: NOT MATCHED
+time=               17405 DATAIN = 01000001 :: 10010101 :: NOT MATCHED
+time=               17425 DATAIN = 10101111 :: 10010101 :: NOT MATCHED
+time=               17445 DATAIN = 11011011 :: 10010101 :: NOT MATCHED
+time=               17485 DATAIN = 11001101 :: 10010101 :: NOT MATCHED
+time=               17585 DATAIN = 10111101 :: 10010101 :: NOT MATCHED
+time=               17665 DATAIN = 01111011 :: 10010101 :: NOT MATCHED
+time=               17715 DATAIN = 00100101 :: 10010101 :: NOT MATCHED
+time=               17765 DATAIN = 00100101 :: 10010101 :: NOT MATCHED
+time=               17845 DATAIN = 00100011 :: 10010101 :: NOT MATCHED
+time=               17875 DATAIN = 01111001 :: 10010101 :: NOT MATCHED
+time=               17905 DATAIN = 01111001 :: 10010101 :: NOT MATCHED
+time=               17945 DATAIN = 10111011 :: 10010101 :: NOT MATCHED
+time=               17985 DATAIN = 01110011 :: 10010101 :: NOT MATCHED
+time=               18075 DATAIN = 01011001 :: 10010101 :: NOT MATCHED
+time=               18105 DATAIN = 01011001 :: 10010101 :: NOT MATCHED
+time=               18135 DATAIN = 10111001 :: 10010101 :: NOT MATCHED
+time=               18165 DATAIN = 10111001 :: 10010101 :: NOT MATCHED
+time=               18185 DATAIN = 10110011 :: 10010101 :: NOT MATCHED
+time=               18265 DATAIN = 01110101 :: 10010101 :: NOT MATCHED
+time=               18315 DATAIN = 00111001 :: 10010101 :: NOT MATCHED
+time=               18345 DATAIN = 00111001 :: 10010101 :: NOT MATCHED
+time=               18445 DATAIN = 00010101 :: 10010101 :: NOT MATCHED
+time=               18495 DATAIN = 00000101 :: 10010101 :: NOT MATCHED
+time=               18545 DATAIN = 00000101 :: 10010101 :: NOT MATCHED
+time=               18665 DATAIN = 10001101 :: 10010101 :: NOT MATCHED
+time=               18685 DATAIN = 10101111 :: 10010101 :: NOT MATCHED
+time=               18785 DATAIN = 11110101 :: 10010101 :: NOT MATCHED
+time=               18825 DATAIN = 01111011 :: 10010101 :: NOT MATCHED
+time=               18895 DATAIN = 00100101 :: 10010101 :: NOT MATCHED
+time=               18945 DATAIN = 00100101 :: 10010101 :: NOT MATCHED
+time=               18985 DATAIN = 00001101 :: 10010101 :: NOT MATCHED
+time=               19045 DATAIN = 00101101 :: 10010101 :: NOT MATCHED
+time=               19075 DATAIN = 00101001 :: 10010101 :: NOT MATCHED
+time=               19105 DATAIN = 00101001 :: 10010101 :: NOT MATCHED
+time=               19215 DATAIN = 10100001 :: 10010101 :: NOT MATCHED
+time=               19245 DATAIN = 10100001 :: 10010101 :: NOT MATCHED
+time=               19285 DATAIN = 01001101 :: 10010101 :: NOT MATCHED
+time=               19345 DATAIN = 11110101 :: 10010101 :: NOT MATCHED
+time=               19405 DATAIN = 11110101 :: 10010101 :: NOT MATCHED
+time=               19445 DATAIN = 01011101 :: 10010101 :: NOT MATCHED
+time=               19605 DATAIN = 00000111 :: 10010101 :: NOT MATCHED
+time=               19625 DATAIN = 10010011 :: 10010101 :: NOT MATCHED
+time=               19695 DATAIN = 01010101 :: 10010101 :: NOT MATCHED
+time=               19765 DATAIN = 01010101 :: 10010101 :: NOT MATCHED
+time=               19785 DATAIN = 10110111 :: 10010101 :: NOT MATCHED
+time=               19835 DATAIN = 01000101 :: 10010101 :: NOT MATCHED
+time=               19885 DATAIN = 01000101 :: 10010101 :: NOT MATCHED
+time=               19905 DATAIN = 01100011 :: 10010101 :: NOT MATCHED
+time=               19935 DATAIN = 01011001 :: 10010101 :: NOT MATCHED
+time=               19965 DATAIN = 01011001 :: 10010101 :: NOT MATCHED
+
+
+PROBLEM 3
+
+time=                  10 INPUT : IN = 00100100, OP = 101
+time=                  10 OUTPUT = 00000000 
+time=                  20 INPUT : IN = 00100100, OP = 000
+time=                  20 OUTPUT = 00100100 
+time=                  30 INPUT : IN = 10000001, OP = 001
+time=                  30 OUTPUT = 00000000 
+time=                  40 INPUT : IN = 10000001, OP = 010
+time=                  40 OUTPUT = 01000000 
+time=                  50 INPUT : IN = 10000001, OP = 011
+time=                  50 OUTPUT = 00000010 
+time=                  60 INPUT : IN = 10000001, OP = 100
+time=                  60 OUTPUT = 01000001 
+time=                  70 INPUT : IN = 10000001, OP = 101
+time=                  70 OUTPUT = 10000010 
+time=                  80 INPUT : IN = 10000001, OP = 110
+time=                  80 OUTPUT = 10000001 
+time=                  90 INPUT : IN = 10000001, OP = 111
+time=                  90 OUTPUT = 10000010 
+
+
+PROBLEM 4-1
+
+time=                  10 INPUT : IN = 00100100, OP = 000
+time=                  10 OUTPUT = x 
+time=                  20 INPUT : IN = 00100100, OP = 001
+time=                  20 OUTPUT = 0 
+time=                  30 INPUT : IN = 00100100, OP = 010
+time=                  30 OUTPUT = 0 
+time=                  40 INPUT : IN = 00100100, OP = 011
+time=                  40 OUTPUT = 1 
+time=                  50 INPUT : IN = 00100100, OP = 100
+time=                  50 OUTPUT = 0 
+time=                  60 INPUT : IN = 00100100, OP = 101
+time=                  60 OUTPUT = 0 
+time=                  70 INPUT : IN = 00100100, OP = 110
+time=                  70 OUTPUT = 1 
+time=                  80 INPUT : IN = 00100100, OP = 111
+time=                  80 OUTPUT = 0 
+
+
+PROBLEM 4-2
+
+time=                  10 INPUT : IN = 00100100, OP = 000
+time=                  10 OUTPUT = xxxxxxxx 
+time=                  20 INPUT : IN = 00100100, OP = 001
+time=                  20 OUTPUT = xxxxxxx0 
+time=                  30 INPUT : IN = 00100100, OP = 010
+time=                  30 OUTPUT = xxxxxx00 
+time=                  40 INPUT : IN = 00100100, OP = 011
+time=                  40 OUTPUT = xxxxx100 
+time=                  50 INPUT : IN = 00100100, OP = 100
+time=                  50 OUTPUT = xxxx0100 
+time=                  60 INPUT : IN = 00100100, OP = 101
+time=                  60 OUTPUT = xxx00100 
+time=                  70 INPUT : IN = 00100100, OP = 110
+time=                  70 OUTPUT = xx100100 
+time=                  80 INPUT : IN = 00100100, OP = 111
+time=                  80 OUTPUT = x0100100 
+
+
+PROBLEM 5
+
+time=                   0 rst = 0, wr = x, rd = x, wr_en = x, rd_en = x, rd_ptr = xxxxx, wr_ptr = xxxxx, emp = x, full = x
+time=                  20 rst = 0, wr = 1, rd = x, wr_en = x, rd_en = x, rd_ptr = 00000, wr_ptr = 00000, emp = 1, full = 0
+time=                  40 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 00011, emp = 1, full = 0
+time=                  60 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 00100, emp = 1, full = 0
+time=                  80 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 00101, emp = 1, full = 0
+time=                 100 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 00110, emp = 1, full = 0
+time=                 120 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 00111, emp = 1, full = 0
+time=                 140 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 01000, emp = 1, full = 0
+time=                 160 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 01001, emp = 1, full = 0
+time=                 180 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 01010, emp = 1, full = 0
+time=                 200 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 01011, emp = 1, full = 0
+time=                 220 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 01100, emp = 1, full = 0
+time=                 240 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 01101, emp = 1, full = 0
+time=                 260 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 01110, emp = 1, full = 0
+time=                 280 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 01111, emp = 1, full = 0
+time=                 300 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 10000, emp = 1, full = 0
+time=                 320 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 10001, emp = 1, full = 0
+time=                 340 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 10010, emp = 1, full = 0
+time=                 360 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 10011, emp = 1, full = 0
+time=                 380 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 10100, emp = 1, full = 0
+time=                 400 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 10101, emp = 1, full = 0
+time=                 420 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 10110, emp = 1, full = 0
+time=                 440 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 10111, emp = 1, full = 0
+time=                 460 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 11000, emp = 1, full = 0
+time=                 480 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 11001, emp = 1, full = 0
+time=                 500 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 11010, emp = 1, full = 0
+time=                 520 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 11011, emp = 1, full = 0
+time=                 540 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 11100, emp = 1, full = 0
+time=                 560 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 11101, emp = 1, full = 0
+time=                 580 rst = 0, wr = 1, rd = x, wr_en = 1, rd_en = x, rd_ptr = 00000, wr_ptr = 11110, emp = 1, full = 0
+time=                 600 rst = 0, wr = 1, rd = x, wr_en = 0, rd_en = x, rd_ptr = 00000, wr_ptr = 11111, emp = 0, full = 1
+time=                 620 rst = 0, wr = 1, rd = x, wr_en = 0, rd_en = x, rd_ptr = 00000, wr_ptr = 11111, emp = 0, full = 1
+time=                 640 rst = 0, wr = 1, rd = x, wr_en = 0, rd_en = x, rd_ptr = 00000, wr_ptr = 11111, emp = 0, full = 1
+time=                 660 rst = 0, wr = 1, rd = x, wr_en = 0, rd_en = x, rd_ptr = 00000, wr_ptr = 11111, emp = 0, full = 1
+time=                 680 rst = 0, wr = 1, rd = x, wr_en = 0, rd_en = x, rd_ptr = 00000, wr_ptr = 11111, emp = 0, full = 1
+time=                 700 rst = 0, wr = 1, rd = x, wr_en = 0, rd_en = x, rd_ptr = 00000, wr_ptr = 11111, emp = 0, full = 1
+time=                 740 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = x, rd_ptr = 00000, wr_ptr = 11111, emp = 0, full = 1
+time=                 760 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 00010, wr_ptr = 11111, emp = 1, full = 0
+time=                 780 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 00011, wr_ptr = 11111, emp = 1, full = 0
+time=                 800 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 00100, wr_ptr = 11111, emp = 1, full = 0
+time=                 820 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 00101, wr_ptr = 11111, emp = 1, full = 0
+time=                 840 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 00110, wr_ptr = 11111, emp = 1, full = 0
+time=                 860 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 00111, wr_ptr = 11111, emp = 1, full = 0
+time=                 880 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 01000, wr_ptr = 11111, emp = 1, full = 0
+time=                 900 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 01001, wr_ptr = 11111, emp = 1, full = 0
+time=                 920 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 01010, wr_ptr = 11111, emp = 1, full = 0
+time=                 940 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 01011, wr_ptr = 11111, emp = 1, full = 0
+time=                 960 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 01100, wr_ptr = 11111, emp = 1, full = 0
+time=                 980 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 01101, wr_ptr = 11111, emp = 1, full = 0
+time=                1000 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 01110, wr_ptr = 11111, emp = 1, full = 0
+time=                1020 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 01111, wr_ptr = 11111, emp = 1, full = 0
+time=                1040 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 10000, wr_ptr = 11111, emp = 1, full = 0
+time=                1060 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 10001, wr_ptr = 11111, emp = 1, full = 0
+time=                1080 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 10010, wr_ptr = 11111, emp = 1, full = 0
+time=                1100 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 10011, wr_ptr = 11111, emp = 1, full = 0
+time=                1120 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 10100, wr_ptr = 11111, emp = 1, full = 0
+time=                1140 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 10101, wr_ptr = 11111, emp = 1, full = 0
+time=                1160 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 10110, wr_ptr = 11111, emp = 1, full = 0
+time=                1180 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 10111, wr_ptr = 11111, emp = 1, full = 0
+time=                1200 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 11000, wr_ptr = 11111, emp = 1, full = 0
+time=                1220 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 11001, wr_ptr = 11111, emp = 1, full = 0
+time=                1240 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 11010, wr_ptr = 11111, emp = 1, full = 0
+time=                1260 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 11011, wr_ptr = 11111, emp = 1, full = 0
+time=                1280 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 11100, wr_ptr = 11111, emp = 1, full = 0
+time=                1300 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 11101, wr_ptr = 11111, emp = 1, full = 0
+time=                1320 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 0, rd_ptr = 11110, wr_ptr = 11111, emp = 1, full = 0
+time=                1340 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 0, rd_ptr = 11110, wr_ptr = 11111, emp = 1, full = 0
+time=                1360 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 0, rd_ptr = 11110, wr_ptr = 11111, emp = 1, full = 0
+time=                1380 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 0, rd_ptr = 11110, wr_ptr = 11111, emp = 1, full = 0
+time=                1400 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 0, rd_ptr = 11110, wr_ptr = 11111, emp = 1, full = 0
+time=                1420 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 0, rd_ptr = 11110, wr_ptr = 11111, emp = 1, full = 0
+time=                1440 rst = 0, wr = 1, rd = 1, wr_en = 0, rd_en = 0, rd_ptr = 11110, wr_ptr = 11111, emp = 1, full = 0
+time=                1460 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 11110, wr_ptr = 00001, emp = 1, full = 0
+time=                1480 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 11110, wr_ptr = 00010, emp = 1, full = 0
+time=                1500 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 11110, wr_ptr = 00011, emp = 1, full = 0
+time=                1520 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 11110, wr_ptr = 00100, emp = 1, full = 0
+time=                1540 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 11110, wr_ptr = 00101, emp = 1, full = 0
+time=                1560 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 11110, wr_ptr = 00110, emp = 1, full = 0
+time=                1580 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 11110, wr_ptr = 00111, emp = 1, full = 0
+time=                1600 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 11110, wr_ptr = 01000, emp = 1, full = 0
+time=                1620 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 11110, wr_ptr = 01001, emp = 1, full = 0
+time=                1640 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 11110, wr_ptr = 01010, emp = 1, full = 0
+time=                1660 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 11110, wr_ptr = 01011, emp = 1, full = 0
+time=                1680 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 11110, wr_ptr = 01100, emp = 1, full = 0
+time=                1700 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 11110, wr_ptr = 01101, emp = 1, full = 0
+time=                1720 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 11110, wr_ptr = 01110, emp = 1, full = 0
+time=                1740 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 11110, wr_ptr = 01111, emp = 1, full = 0
+time=                1760 rst = 1, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 11110, wr_ptr = 10000, emp = 1, full = 0
+time=                1780 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 00000, wr_ptr = 00000, emp = 1, full = 0
+time=                1800 rst = 0, wr = 0, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 00000, wr_ptr = 00011, emp = 1, full = 0
+time=                1820 rst = 0, wr = 1, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 00001, wr_ptr = 00100, emp = 1, full = 0
+time=                1840 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 00010, wr_ptr = 00101, emp = 1, full = 0
+time=                1860 rst = 0, wr = 1, rd = 0, wr_en = 1, rd_en = 1, rd_ptr = 00010, wr_ptr = 00110, emp = 1, full = 0
+time=                1880 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 0, rd_ptr = 00010, wr_ptr = 01000, emp = 1, full = 0
+time=                1900 rst = 0, wr = 0, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 00010, wr_ptr = 01010, emp = 1, full = 0
+time=                1920 rst = 0, wr = 1, rd = 0, wr_en = 0, rd_en = 1, rd_ptr = 00011, wr_ptr = 01011, emp = 1, full = 0
+time=                1940 rst = 0, wr = 1, rd = 0, wr_en = 1, rd_en = 0, rd_ptr = 00011, wr_ptr = 01100, emp = 1, full = 0
+time=                1960 rst = 0, wr = 1, rd = 0, wr_en = 1, rd_en = 0, rd_ptr = 00011, wr_ptr = 01101, emp = 1, full = 0
+time=                1980 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 0, rd_ptr = 00011, wr_ptr = 01110, emp = 1, full = 0
+time=                2000 rst = 0, wr = 0, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 00011, wr_ptr = 10000, emp = 1, full = 0
+time=                2020 rst = 0, wr = 0, rd = 0, wr_en = 0, rd_en = 1, rd_ptr = 00100, wr_ptr = 10001, emp = 1, full = 0
+time=                2040 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 0, rd_ptr = 00100, wr_ptr = 10001, emp = 1, full = 0
+time=                2060 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 00101, wr_ptr = 10001, emp = 1, full = 0
+time=                2080 rst = 0, wr = 1, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 00110, wr_ptr = 10001, emp = 1, full = 0
+time=                2100 rst = 0, wr = 1, rd = 0, wr_en = 1, rd_en = 1, rd_ptr = 00110, wr_ptr = 10010, emp = 1, full = 0
+time=                2120 rst = 0, wr = 0, rd = 0, wr_en = 1, rd_en = 0, rd_ptr = 00110, wr_ptr = 10011, emp = 1, full = 0
+time=                2140 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 0, rd_ptr = 00110, wr_ptr = 10011, emp = 1, full = 0
+time=                2160 rst = 0, wr = 0, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 00111, wr_ptr = 10011, emp = 1, full = 0
+time=                2180 rst = 0, wr = 1, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 01000, wr_ptr = 10011, emp = 1, full = 0
+time=                2200 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 01000, wr_ptr = 10100, emp = 1, full = 0
+time=                2220 rst = 0, wr = 0, rd = 0, wr_en = 1, rd_en = 1, rd_ptr = 01000, wr_ptr = 10101, emp = 1, full = 0
+time=                2240 rst = 0, wr = 1, rd = 1, wr_en = 0, rd_en = 0, rd_ptr = 01000, wr_ptr = 10101, emp = 1, full = 0
+time=                2260 rst = 0, wr = 1, rd = 0, wr_en = 1, rd_en = 1, rd_ptr = 01000, wr_ptr = 10110, emp = 1, full = 0
+time=                2280 rst = 0, wr = 0, rd = 0, wr_en = 1, rd_en = 0, rd_ptr = 01000, wr_ptr = 10111, emp = 1, full = 0
+time=                2300 rst = 0, wr = 0, rd = 0, wr_en = 0, rd_en = 0, rd_ptr = 01000, wr_ptr = 10111, emp = 1, full = 0
+time=                2320 rst = 0, wr = 1, rd = 0, wr_en = 0, rd_en = 0, rd_ptr = 01000, wr_ptr = 10111, emp = 1, full = 0
+time=                2340 rst = 0, wr = 0, rd = 1, wr_en = 1, rd_en = 0, rd_ptr = 01000, wr_ptr = 11000, emp = 1, full = 0
+time=                2360 rst = 0, wr = 1, rd = 0, wr_en = 0, rd_en = 1, rd_ptr = 01001, wr_ptr = 11000, emp = 1, full = 0
+time=                2380 rst = 0, wr = 0, rd = 0, wr_en = 1, rd_en = 0, rd_ptr = 01001, wr_ptr = 11001, emp = 1, full = 0
+time=                2400 rst = 0, wr = 0, rd = 0, wr_en = 0, rd_en = 0, rd_ptr = 01001, wr_ptr = 11001, emp = 1, full = 0
+time=                2420 rst = 0, wr = 1, rd = 1, wr_en = 0, rd_en = 0, rd_ptr = 01001, wr_ptr = 11001, emp = 1, full = 0
+time=                2440 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 01001, wr_ptr = 11010, emp = 1, full = 0
+time=                2460 rst = 0, wr = 1, rd = 0, wr_en = 1, rd_en = 1, rd_ptr = 01001, wr_ptr = 11011, emp = 1, full = 0
+time=                2480 rst = 0, wr = 0, rd = 1, wr_en = 1, rd_en = 0, rd_ptr = 01001, wr_ptr = 11100, emp = 1, full = 0
+time=                2500 rst = 0, wr = 1, rd = 1, wr_en = 0, rd_en = 1, rd_ptr = 01010, wr_ptr = 11100, emp = 1, full = 0
+time=                2520 rst = 0, wr = 0, rd = 0, wr_en = 1, rd_en = 1, rd_ptr = 01010, wr_ptr = 11101, emp = 1, full = 0
+time=                2540 rst = 0, wr = 1, rd = 1, wr_en = 0, rd_en = 0, rd_ptr = 01010, wr_ptr = 11101, emp = 1, full = 0
+time=                2560 rst = 0, wr = 0, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 01010, wr_ptr = 11110, emp = 1, full = 0
+time=                2580 rst = 0, wr = 1, rd = 0, wr_en = 0, rd_en = 1, rd_ptr = 01011, wr_ptr = 11110, emp = 1, full = 0
+time=                2600 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 0, rd_ptr = 01011, wr_ptr = 11111, emp = 1, full = 0
+time=                2620 rst = 0, wr = 1, rd = 0, wr_en = 1, rd_en = 1, rd_ptr = 01011, wr_ptr = 00000, emp = 1, full = 0
+time=                2640 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 0, rd_ptr = 01011, wr_ptr = 00001, emp = 1, full = 0
+time=                2660 rst = 0, wr = 0, rd = 0, wr_en = 1, rd_en = 1, rd_ptr = 01011, wr_ptr = 00010, emp = 1, full = 0
+time=                2680 rst = 0, wr = 0, rd = 0, wr_en = 0, rd_en = 0, rd_ptr = 01011, wr_ptr = 00010, emp = 1, full = 0
+time=                2700 rst = 0, wr = 1, rd = 1, wr_en = 0, rd_en = 0, rd_ptr = 01011, wr_ptr = 00010, emp = 1, full = 0
+time=                2720 rst = 0, wr = 0, rd = 0, wr_en = 1, rd_en = 1, rd_ptr = 01011, wr_ptr = 00011, emp = 1, full = 0
+time=                2740 rst = 0, wr = 1, rd = 1, wr_en = 0, rd_en = 0, rd_ptr = 01011, wr_ptr = 00011, emp = 1, full = 0
+time=                2760 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 01011, wr_ptr = 00100, emp = 1, full = 0
+time=                2780 rst = 0, wr = 1, rd = 0, wr_en = 1, rd_en = 1, rd_ptr = 01011, wr_ptr = 00101, emp = 1, full = 0
+time=                2800 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 0, rd_ptr = 01011, wr_ptr = 00110, emp = 1, full = 0
+time=                2820 rst = 0, wr = 1, rd = 0, wr_en = 1, rd_en = 1, rd_ptr = 01011, wr_ptr = 00111, emp = 1, full = 0
+time=                2840 rst = 0, wr = 0, rd = 0, wr_en = 1, rd_en = 0, rd_ptr = 01011, wr_ptr = 01000, emp = 1, full = 0
+time=                2860 rst = 0, wr = 0, rd = 0, wr_en = 0, rd_en = 0, rd_ptr = 01011, wr_ptr = 01000, emp = 1, full = 0
+time=                2880 rst = 0, wr = 0, rd = 0, wr_en = 0, rd_en = 0, rd_ptr = 01011, wr_ptr = 01000, emp = 1, full = 0
+time=                2900 rst = 0, wr = 1, rd = 1, wr_en = 0, rd_en = 0, rd_ptr = 01011, wr_ptr = 01000, emp = 1, full = 0
+time=                2920 rst = 0, wr = 1, rd = 1, wr_en = 1, rd_en = 1, rd_ptr = 01011, wr_ptr = 01001, emp = 1, full = 0
+time=                2940 rst = 0, wr = 1, rd = 0, wr_en = 0, rd_en = 1, rd_ptr = 01011, wr_ptr = 01010, emp = 0, full = 1
+time=                2960 rst = 0, wr = 1, rd = 1, wr_en = 0, rd_en = 0, rd_ptr = 01011, wr_ptr = 01010, emp = 0, full = 1
+time=                2980 rst = 0, wr = 0, rd = 0, wr_en = 0, rd_en = 1, rd_ptr = 01011, wr_ptr = 01010, emp = 0, full = 1
+time=                3000 rst = 0, wr = 1, rd = 1, wr_en = 0, rd_en = 0, rd_ptr = 01011, wr_ptr = 01010, emp = 0, full = 1
+
+
