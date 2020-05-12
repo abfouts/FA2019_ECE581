@@ -1,0 +1,293 @@
+dc_shell> report_cell
+
+****************************************
+Report : cell
+Design : wallace
+Version: G-2012.06
+Date   : Sun Nov 24 15:58:56 2019
+****************************************
+
+Attributes:
+   BO - reference allows boundary optimization
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+S2R12C1                   half_adder_0                    792.000000
+                                                                    h
+S2R12C2                   full_adder_0                    1512.000000
+                                                                    h
+S2R12C3                   full_adder_37                   1512.000000
+                                                                    h
+S2R12C4                   full_adder_36                   1512.000000
+                                                                    h
+S2R12C5                   full_adder_35                   1512.000000
+                                                                    h
+S2R12C6                   full_adder_34                   1512.000000
+                                                                    h
+S2R12C7                   full_adder_33                   1512.000000
+                                                                    h
+S2R12C8                   half_adder_14                   792.000000
+                                                                    h
+S2R23C1                   half_adder_13                   792.000000
+                                                                    h
+S2R23C2                   full_adder_32                   1512.000000
+                                                                    h
+S2R23C3                   full_adder_31                   1512.000000
+                                                                    h
+S2R23C4                   full_adder_30                   1512.000000
+                                                                    h
+S2R23C5                   full_adder_29                   1512.000000
+                                                                    h
+S2R23C6                   full_adder_28                   1512.000000
+                                                                    h
+S2R23C7                   full_adder_27                   1512.000000
+                                                                    h
+S2R23C8                   half_adder_12                   792.000000
+                                                                    h
+S22R12C1                  half_adder_11                   792.000000
+                                                                    h
+S22R12C2                  full_adder_26                   1512.000000
+                                                                    h
+S22R12C3                  full_adder_25                   1512.000000
+                                                                    h
+S22R12C4                  full_adder_24                   1512.000000
+                                                                    h
+S22R12C5                  full_adder_23                   1512.000000
+                                                                    h
+S22R12C6                  full_adder_22                   1512.000000
+                                                                    h
+S22R12C7                  full_adder_21                   1512.000000
+                                                                    h
+S22R12C8                  full_adder_20                   1512.000000
+                                                                    h
+S22R34C1                  half_adder_10                   792.000000
+                                                                    h
+S22R34C2                  full_adder_19                   1512.000000
+                                                                    h
+S22R34C3                  full_adder_18                   1512.000000
+                                                                    h
+S22R34C4                  full_adder_17                   1512.000000
+                                                                    h
+S22R34C5                  full_adder_16                   1512.000000
+                                                                    h
+S22R34C6                  full_adder_15                   1512.000000
+                                                                    h
+S22R34C7                  full_adder_14                   1512.000000
+                                                                    h
+S22R34C8                  half_adder_9                    792.000000
+                                                                    h
+U27                       NOR2X1          osu05_stdcells  216.000000
+U28                       NOR2X1          osu05_stdcells  216.000000
+U29                       NOR2X1          osu05_stdcells  216.000000
+U30                       NOR2X1          osu05_stdcells  216.000000
+U31                       NOR2X1          osu05_stdcells  216.000000
+U32                       NOR2X1          osu05_stdcells  216.000000
+U33                       NOR2X1          osu05_stdcells  216.000000
+U34                       NOR2X1          osu05_stdcells  216.000000
+U35                       INVX1           osu05_stdcells  144.000000
+U36                       NOR2X1          osu05_stdcells  216.000000
+U37                       NOR2X1          osu05_stdcells  216.000000
+U38                       NOR2X1          osu05_stdcells  216.000000
+U39                       NOR2X1          osu05_stdcells  216.000000
+U40                       NOR2X1          osu05_stdcells  216.000000
+U41                       NOR2X1          osu05_stdcells  216.000000
+U42                       NOR2X1          osu05_stdcells  216.000000
+U43                       NOR2X1          osu05_stdcells  216.000000
+U44                       INVX1           osu05_stdcells  144.000000
+U45                       NOR2X1          osu05_stdcells  216.000000
+U46                       NOR2X1          osu05_stdcells  216.000000
+U47                       NOR2X1          osu05_stdcells  216.000000
+U48                       NOR2X1          osu05_stdcells  216.000000
+U49                       NOR2X1          osu05_stdcells  216.000000
+U50                       INVX1           osu05_stdcells  144.000000
+U51                       NAND3X1         osu05_stdcells  324.000000
+U52                       NOR2X1          osu05_stdcells  216.000000
+U53                       NOR2X1          osu05_stdcells  216.000000
+U54                       INVX1           osu05_stdcells  144.000000
+U55                       NOR2X1          osu05_stdcells  216.000000
+U56                       NOR2X1          osu05_stdcells  216.000000
+U57                       NOR2X1          osu05_stdcells  216.000000
+U58                       NOR2X1          osu05_stdcells  216.000000
+U59                       NOR2X1          osu05_stdcells  216.000000
+U60                       NOR2X1          osu05_stdcells  216.000000
+U61                       NOR2X1          osu05_stdcells  216.000000
+U62                       NOR2X1          osu05_stdcells  216.000000
+U63                       INVX1           osu05_stdcells  144.000000
+U64                       NOR2X1          osu05_stdcells  216.000000
+U65                       NOR2X1          osu05_stdcells  216.000000
+U66                       NOR2X1          osu05_stdcells  216.000000
+U67                       NOR2X1          osu05_stdcells  216.000000
+U68                       NOR2X1          osu05_stdcells  216.000000
+U69                       NOR2X1          osu05_stdcells  216.000000
+U70                       NOR2X1          osu05_stdcells  216.000000
+U71                       NOR2X1          osu05_stdcells  216.000000
+U72                       INVX1           osu05_stdcells  144.000000
+U73                       NOR2X1          osu05_stdcells  216.000000
+U74                       NOR2X1          osu05_stdcells  216.000000
+U75                       NOR2X1          osu05_stdcells  216.000000
+U76                       NOR2X1          osu05_stdcells  216.000000
+U77                       NOR2X1          osu05_stdcells  216.000000
+U78                       NOR2X1          osu05_stdcells  216.000000
+U79                       NOR2X1          osu05_stdcells  216.000000
+U80                       NOR2X1          osu05_stdcells  216.000000
+U81                       INVX1           osu05_stdcells  144.000000
+U82                       NOR2X1          osu05_stdcells  216.000000
+U83                       NOR2X1          osu05_stdcells  216.000000
+U84                       NOR2X1          osu05_stdcells  216.000000
+U85                       NOR2X1          osu05_stdcells  216.000000
+U86                       NOR2X1          osu05_stdcells  216.000000
+U87                       NOR2X1          osu05_stdcells  216.000000
+U88                       NOR2X1          osu05_stdcells  216.000000
+U89                       NOR2X1          osu05_stdcells  216.000000
+U90                       INVX1           osu05_stdcells  144.000000
+U91                       NOR2X1          osu05_stdcells  216.000000
+U92                       INVX1           osu05_stdcells  144.000000
+U93                       NOR2X1          osu05_stdcells  216.000000
+U94                       INVX1           osu05_stdcells  144.000000
+U95                       NOR2X1          osu05_stdcells  216.000000
+U96                       INVX1           osu05_stdcells  144.000000
+U97                       NOR2X1          osu05_stdcells  216.000000
+U98                       INVX1           osu05_stdcells  144.000000
+U99                       NOR2X1          osu05_stdcells  216.000000
+U100                      INVX1           osu05_stdcells  144.000000
+U101                      NOR2X1          osu05_stdcells  216.000000
+U102                      INVX1           osu05_stdcells  144.000000
+U103                      NOR2X1          osu05_stdcells  216.000000
+U104                      INVX1           osu05_stdcells  144.000000
+U105                      NOR2X1          osu05_stdcells  216.000000
+U106                      INVX1           osu05_stdcells  144.000000
+U107                      INVX1           osu05_stdcells  144.000000
+add_156                   wallace_DW01_add_0              11016.000000
+                                                                    BO, h
+step3_0                   half_adder_8                    792.000000
+                                                                    h
+step3_1                   half_adder_7                    792.000000
+                                                                    h
+step3_2                   full_adder_13                   1512.000000
+                                                                    h
+step3_3                   full_adder_12                   1512.000000
+                                                                    h
+step3_4                   full_adder_11                   1512.000000
+                                                                    h
+step3_5                   full_adder_10                   1512.000000
+                                                                    h
+step3_6                   full_adder_9                    1512.000000
+                                                                    h
+step3_7                   full_adder_8                    1512.000000
+                                                                    h
+step3_8                   half_adder_6                    792.000000
+                                                                    h
+step3_9                   half_adder_5                    792.000000
+                                                                    h
+step4_0                   half_adder_4                    792.000000
+                                                                    h
+step4_1                   half_adder_3                    792.000000
+                                                                    h
+step4_2                   half_adder_2                    792.000000
+                                                                    h
+step4_3                   full_adder_7                    1512.000000
+                                                                    h
+step4_4                   full_adder_6                    1512.000000
+                                                                    h
+step4_5                   full_adder_5                    1512.000000
+                                                                    h
+step4_6                   full_adder_4                    1512.000000
+                                                                    h
+step4_7                   full_adder_3                    1512.000000
+                                                                    h
+step4_8                   full_adder_2                    1512.000000
+                                                                    h
+step4_9                   full_adder_1                    1512.000000
+                                                                    h
+step4_10                  half_adder_1                    792.000000
+                                                                    h
+--------------------------------------------------------------------------------
+Total 135 cells                                           96732.000000
+1
+dc_shell>
+dc_shell> report_area
+
+****************************************
+Report : area
+Design : wallace
+Version: G-2012.06
+Date   : Sun Nov 24 15:59:09 2019
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /home/abfouts/common/Documents/ece581_abfouts_project3/stage2/task1/osu05_stdcells.db)
+
+Number of ports:                           32
+Number of nets:                           222
+Number of cells:                          135
+Number of combinational cells:             81
+Number of sequential cells:                 0
+Number of macros:                           0
+Number of buf/inv:                         17
+Number of references:                      57
+
+Combinational area:       96732.000000
+Noncombinational area:       0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          96732.000000
+Total area:                 undefined
+1
+dc_shell> report_power
+
+****************************************
+Report : power
+        -analysis_effort low
+Design : wallace
+Version: G-2012.06
+Date   : Sun Nov 24 15:59:14 2019
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /home/abfouts/common/Documents/ece581_abfouts_project3/stage2/task1/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =  58.8771 mW   (52%)
+  Net Switching Power  =  53.8722 mW   (48%)
+                         ---------
+Total Dynamic Power    = 112.7493 mW  (100%)
+
+Cell Leakage Power     =  30.3880 nW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational     58.8772           53.8722           30.3880          112.7493  ( 100.00%)
+--------------------------------------------------------------------------------------------------
+Total             58.8772 mW        53.8722 mW        30.3880 nW       112.7493 mW
+1
+dc_shell>
