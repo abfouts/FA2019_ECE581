@@ -29,7 +29,7 @@ $fwrite(write_file, "\n\n PROBLEM 2 \n\n");
 
 for(int i = 0; i < 512; i = i + 1) begin
 	if(M != 511)
-		#10 M <= M + 1'b1;
+		#10 M = M + 1'b1;
 end
 
 if(M == 511) //All bits high = 9
