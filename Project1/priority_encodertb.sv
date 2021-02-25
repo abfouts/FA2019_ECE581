@@ -15,12 +15,12 @@ integer write_file;
 write_file = $fopen("log.txt", "a");
 $fwrite(write_file, "\n\nPROBLEM 3\n\n");
 
-enable <= 0;
+enable = 0;
 #10;
 
 $fwrite(write_file, "TIME = %d, inVal = %b, encode = %b, enable = %b \n", $time, inVal, encode, enable);
 
-enable <= 1;
+enable = 1;
 #50;    
 inVal = 0;
 for(int i = 0; i < 2**8; i = i + 1) begin
