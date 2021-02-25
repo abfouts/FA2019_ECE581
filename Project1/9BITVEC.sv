@@ -13,9 +13,9 @@ always_comb
 begin
 
 if(M == 9'b111111111) 
-	outBit <= 1;
+	outBit = 1;
 else
-	outBit <= 0;
+	outBit = 0;
 end
 endmodule
 
