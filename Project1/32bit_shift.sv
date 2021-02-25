@@ -9,15 +9,15 @@ module problem7_1
 	
 	always_comb
 		if (x[31]) begin
-			y <= x>>3;
-			y[31] <= 1;
-			y[30] <= 1;
-			y[29] <= 1;
+			y = x>>3;
+			y[31] = 1;
+			y[30] = 1;
+			y[29] = 1;
 		end else begin
-			y <= x>>3;
-			y[31] <= 0;
-			y[30] <= 0;
-			y[29] <= 0;
+			y = x>>3;
+			y[31] = 0;
+			y[30] = 0;
+			y[29] = 0;
 		end
 	
 endmodule: problem7_1
