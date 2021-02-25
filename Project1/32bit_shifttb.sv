@@ -24,7 +24,7 @@ module Problem7_TB;
 	initial 
 		begin
 		#100
-		in <= 32'hF0000000;
+		in = 32'hF0000000;
 		write_file = $fopen("log.txt", "a");
 		$fwrite(write_file, "\n\nPROBLEM 7\n\n");
 		
