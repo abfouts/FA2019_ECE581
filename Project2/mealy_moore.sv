@@ -15,53 +15,53 @@ begin
 unique case(state)					//unique case
 	FLOOR1: begin
 		if(r2) begin 
-			nextstate <= FLOOR2;		//Floor 2 has been requested
-			{d2, d1, u2, n} <= 4'b0000;	//outputs
-			u1 <= 1'b1;
+			nextstate = FLOOR2;		//Floor 2 has been requested
+			{d2, d1, u2, n} = 4'b0000;	//outputs
+			u1 = 1'b1;
 		end 
 		else if(r3) begin
-			nextstate <= FLOOR3;		//Floor 3 has been requested
-			{d2, d1, u1, n} <= 4'b0000;	//outputs
-			u2 <= 1'b1;
+			nextstate = FLOOR3;		//Floor 3 has been requested
+			{d2, d1, u1, n} = 4'b0000;	//outputs
+			u2 = 1'b1;
 		end 
 		else begin
-			nextstate <= FLOOR1;		//Floor 1 has been requested but on floor 1
+			nextstate = FLOOR1;		//Floor 1 has been requested but on floor 1
 			n = 1'b1;
-			{d2, u1, u2, d1} <= 4'b0000;	//outputs
+			{d2, u1, u2, d1} = 4'b0000;	//outputs
 		end
 	end
 
 	FLOOR2: begin
 		if(r1) begin
-			nextstate <= FLOOR1;		//Floor 1 has been requested
-			{d2, u1, u2, n} <= 4'b0000;	//outputs
-			d1 <= 1'b1;
+			nextstate = FLOOR1;		//Floor 1 has been requested
+			{d2, u1, u2, n} = 4'b0000;	//outputs
+			d1 = 1'b1;
 		end 
 		else if(r3) begin
-			nextstate <= FLOOR3;		//Floor 3 has been requested
-			{d2, d1, u2, n} <= 4'b0000;	//outputs
-			u1 <= 1'b1;
+			nextstate = FLOOR3;		//Floor 3 has been requested
+			{d2, d1, u2, n} = 4'b0000;	//outputs
+			u1 = 1'b1;
 		end 
 		else begin
-			nextstate <= FLOOR2;		//Floor 2 has been requested but on floor 2
-			n <= 1'b1;
-			{d2, u1, u2, d1} <= 4'b0000;	//outputs
+			nextstate = FLOOR2;		//Floor 2 has been requested but on floor 2
+			n = 1'b1;
+			{d2, u1, u2, d1} = 4'b0000;	//outputs
 		end
 	end
 	
 	FLOOR3: begin
 		if(r2) begin
-			nextstate <= FLOOR2;		//Floor 2 has been requested
-			{d2, u1, u2, n} <= 4'b0000;	//outputs
-			d1 <= 1'b1;
+			nextstate = FLOOR2;		//Floor 2 has been requested
+			{d2, u1, u2, n} = 4'b0000;	//outputs
+			d1 = 1'b1;
 		end else if(r1) begin
-			nextstate <= FLOOR1;		//Floor 1 has been requested
-			{d1, u1, u2, n} <= 4'b0000;	//outputs
-			d2 <= 1'b1;
+			nextstate = FLOOR1;		//Floor 1 has been requested
+			{d1, u1, u2, n} = 4'b0000;	//outputs
+			d2 = 1'b1;
 		end else begin
-			nextstate <= FLOOR3;		//Floor 3 has been requested but on floor 3
-			n <= 1'b1;
-			{d2, u1, u2, d1} <= 4'b0000;	//outputs
+			nextstate = FLOOR3;		//Floor 3 has been requested but on floor 3
+			n = 1'b1;
+			{d2, u1, u2, d1} = 4'b0000;	//outputs
 		end
 	end
 endcase
@@ -97,119 +97,119 @@ always_comb begin
 unique case (state)
 
 S11: begin
-{d2, d1, n, u1, u2} <= 5'b01111;
+{d2, d1, n, u1, u2} = 5'b01111;
 if(r1) begin
-	nextstate <= S13;
+	nextstate = S13;
 end
 if(r2) begin
-	nextstate <= S23;
+	nextstate = S23;
 end
 if(r3) begin
-	nextstate <= S33;
+	nextstate = S33;
 end
 end
 
 S21: begin
-{d2, d1, n, u1, u2} <= 5'b10111;
+{d2, d1, n, u1, u2} = 5'b10111;
 if(r1) begin
-	nextstate <= S12;
+	nextstate = S12;
 end
 if(r2) begin
-	nextstate <= S22;
+	nextstate = S22;
 end
 if(r3) begin
-	nextstate <= S32;
+	nextstate = S32;
 end
 end
 
 S31: begin
-{d2, d1, n, u1, u2} <= 5'b11011;
+{d2, d1, n, u1, u2} = 5'b11011;
 if(r1) begin
-	nextstate <= S11;
+	nextstate = S11;
 end
 if(r2) begin
-	nextstate <= S21;
+	nextstate = S21;
 end
 if(r3) begin
-	nextstate <= S31;
+	nextstate = S31;
 end
 end
 
 S12: begin
-{d2, d1, n, u1, u2} <= 5'b10111;
+{d2, d1, n, u1, u2} = 5'b10111;
 if(r1) begin
-	nextstate <= S13;
+	nextstate = S13;
 end
 if(r2) begin
-	nextstate <= S23;
+	nextstate = S23;
 end
 if(r3) begin
-	nextstate <= S33;
+	nextstate = S33;
 end
 end
 
 S22: begin
-{d2, d1, n, u1, u2} <= 5'b11011;
+{d2, d1, n, u1, u2} = 5'b11011;
 if(r1) begin
-	nextstate <= S12;
+	nextstate = S12;
 end
 if(r2) begin
-	nextstate <= S22;
+	nextstate = S22;
 end
 if(r3) begin
-	nextstate <= S32;
+	nextstate = S32;
 end
 end
 
 S32: begin
-{d2, d1, n, u1, u2} <= 5'b11101;
+{d2, d1, n, u1, u2} = 5'b11101;
 if(r1) begin
-	nextstate <= S11;
+	nextstate = S11;
 end
 if(r2) begin
-	nextstate <= S21;
+	nextstate = S21;
 end
 if(r3) begin
-	nextstate <= S31;
+	nextstate = S31;
 end
 end
 
 S13: begin
-{d2, d1, n, u1, u2} <= 5'b11011;
+{d2, d1, n, u1, u2} = 5'b11011;
 if(r1) begin
-	nextstate <= S13;
+	nextstate = S13;
 end
 if(r2) begin
-	nextstate <= S23;
+	nextstate = S23;
 end
 if(r3) begin
-	nextstate <= S33;
+	nextstate = S33;
 end
 end
 
 S23: begin
-{d2, d1, n, u1, u2} <= 5'b11101;
+{d2, d1, n, u1, u2} = 5'b11101;
 if(r1) begin
-	nextstate <= S12;
+	nextstate = S12;
 end
 if(r2) begin
-	nextstate <= S22;
+	nextstate = S22;
 end
 if(r3) begin
-	nextstate <= S32;
+	nextstate = S32;
 end
 end
 
 S33: begin
-{d2, d1, n, u1, u2} <= 5'b11110;
+{d2, d1, n, u1, u2} = 5'b11110;
 if(r1) begin
-	nextstate <= S11;
+	nextstate = S11;
 end
 if(r2) begin
-	nextstate <= S21;
+	nextstate = S21;
 end
 if(r3) begin
-	nextstate <= S31;
+	nextstate = S31;
 end
 end
 
