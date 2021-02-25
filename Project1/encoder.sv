@@ -9,10 +9,10 @@ module Problem8
 	
 	always_comb
 		case({c,b,a}) //if a,b,c is less than 3 then  f=1
-		 3'b000: f<=1;
-		 3'b001: f<=1;
-		 3'b010: f<=1;
-		 default f<=0;
+		 3'b000: f=1;
+		 3'b001: f=1;
+		 3'b010: f=1;
+		 default f=0;
 		endcase
 	
 endmodule
