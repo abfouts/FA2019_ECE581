@@ -21,9 +21,9 @@ sequencer uut(
 );
 
 initial begin
-clk <= 0;
+clk = 0;
 forever begin
-#5 clk <= ~clk; // clock period = 10, at least 80 to get through the code
+#5 clk = ~clk; // clock period = 10, at least 80 to get through the code
 end
 end
 
