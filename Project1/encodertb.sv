@@ -23,10 +23,10 @@ module Problem8_TB;
 		write_file = $fopen("log.txt", "a");
 		$fwrite(write_file, "\n\nPROBLEM 8\n\n");
 
-		in <= 0;
+		in = 0;
 		//binary count to see what the output is
 		for (int i = 0; i < 2**3; i = i + 1) begin
-			#10 in <= in + 1'b1;
+			#10 in = in + 1'b1;
 			$display("time=",$time,, "in(3bit) = %b, out = %b\n",in, out);
 			$fwrite(write_file, "time=",$time,, "in(3bit) = %b, out = %b\n",in, out);
 		end
