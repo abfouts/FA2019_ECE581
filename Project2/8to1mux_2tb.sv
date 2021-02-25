@@ -18,7 +18,7 @@ module Problem4_2_TB;
 		write_file = $fopen("log.txt", "a");
 		$fwrite(write_file, "\n\nPROBLEM 4-2\n\n");
 
-		inp <= $random;
+		inp = $random;
 		
 
 		//test begin
@@ -26,31 +26,31 @@ module Problem4_2_TB;
 		$fwrite(write_file, "time=",$time,, "INPUT : IN = %b, OP = %b\n", inp, opcode);
 		$fwrite(write_file, "time=",$time,, "OUTPUT = %b \n", outp);
 
-		opcode <= 001; #10;
+		opcode = 001; #10;
 		$fwrite(write_file, "time=",$time,, "INPUT : IN = %b, OP = %b\n", inp, opcode);
 		$fwrite(write_file, "time=",$time,, "OUTPUT = %b \n", outp);
 
-		opcode <= 010; #10;
+		opcode = 010; #10;
 		$fwrite(write_file, "time=",$time,, "INPUT : IN = %b, OP = %b\n", inp, opcode);
 		$fwrite(write_file, "time=",$time,, "OUTPUT = %b \n", outp);
 
-		opcode <= 011; #10;
+		opcode = 011; #10;
 		$fwrite(write_file, "time=",$time,, "INPUT : IN = %b, OP = %b\n", inp, opcode);
 		$fwrite(write_file, "time=",$time,, "OUTPUT = %b \n", outp);
 
-		opcode <= 100; #10;
+		opcode = 100; #10;
 		$fwrite(write_file, "time=",$time,, "INPUT : IN = %b, OP = %b\n", inp, opcode);
 		$fwrite(write_file, "time=",$time,, "OUTPUT = %b \n", outp);
 
-		opcode <= 101; #10;
+		opcode = 101; #10;
 		$fwrite(write_file, "time=",$time,, "INPUT : IN = %b, OP = %b\n", inp, opcode);
 		$fwrite(write_file, "time=",$time,, "OUTPUT = %b \n", outp);
 
-		opcode <= 110; #10;
+		opcode = 110; #10;
 		$fwrite(write_file, "time=",$time,, "INPUT : IN = %b, OP = %b\n", inp, opcode);
 		$fwrite(write_file, "time=",$time,, "OUTPUT = %b \n", outp);
 
-		opcode <= 111; #10;
+		opcode = 111; #10;
 		$fwrite(write_file, "time=",$time,, "INPUT : IN = %b, OP = %b\n", inp, opcode);
 		$fwrite(write_file, "time=",$time,, "OUTPUT = %b \n", outp);
 		
@@ -59,8 +59,8 @@ module Problem4_2_TB;
 	end
 
 	always begin
-		clk <= 1; #5;
-		clk <= 0; #5;
+		clk = 1; #5;
+		clk = 0; #5;
 	end
 
 endmodule
