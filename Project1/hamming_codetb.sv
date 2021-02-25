@@ -33,34 +33,34 @@ initial begin
 write_file = $fopen("log.txt", "a");
 $fwrite(write_file, "\n\nPROBLEM 6\n\n");
 
-hamming <= 0;
-dataOnly <= 0;
-parity <= 0;
-hamming_in <= 0;
-data_out <= 0;
-hamming_fix <= 0;
+hamming = 0;
+dataOnly = 0;
+parity = 0;
+hamming_in = 0;
+data_out = 0;
+hamming_fix = 0;
 #10
 
 for(int i = 0; i< 2**4; i= i+1) begin
 #10
-dataOnly <= dataOnly + 1'b1;
+dataOnly = dataOnly + 1'b1;
 $display("time=",$time,, "4 Bit data in = %b : encode(7 bit) = %b\n", dataOnly, hamming); //data to hamming module
 $fwrite(write_file,"time=",$time,, "4 Bit data in = %b : encode(7 bit) = %b\n", dataOnly, hamming); //print to file
 end
 
 for(int i = 0; i< 2**7; i= i+1) begin
 #20
-hamming_in <= hamming_in + 1'b1;
+hamming_in = hamming_in + 1'b1;
 $display("time=",$time,, "4 Bit data out = %b : Hamming_in(7 bit) = %b, corrected Hamming = %b, parity=%b\n", data_out, hamming_in, hamming_fix, parity); 	//hamming to 4 bit
 $fwrite(write_file,"time=",$time,, "4 Bit data out = %b : Hamming_in(7 bit) = %b, corrected Hamming = %b, parity=%b\n", data_out, hamming_in, hamming_fix, parity);
 end
 
-parity <= 1;
-hamming_in <= 0;
+parity = 1;
+hamming_in = 0;
 
 for(int i = 0; i< 2**7; i= i+1) begin
 #20
-hamming_in <= hamming_in + 1'b1;
+hamming_in = hamming_in + 1'b1;
 $display("time=",$time,, "4 Bit data out = %b : Hamming_in(7 bit) = %b, corrected Hamming = %b, parity=%b\n", data_out, hamming_in, hamming_fix, parity); 	//hamming to 4 bit
 $fwrite(write_file, "time=",$time,, "4 Bit data out = %b : Hamming_in(7 bit) = %b, corrected Hamming = %b, parity=%b\n", data_out, hamming_in, hamming_fix, parity);
 end
