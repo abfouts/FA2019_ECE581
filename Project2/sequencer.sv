@@ -43,90 +43,90 @@ always_comb begin
 unique case(state) //Case going through each case
 BIT1: begin
 	if(DIGITS[0] == latchedData[0]) begin		//Checks the first bit
-		nextstate <= BIT2;			//If the same move to next state
-		ready <= 1'b0;
+		nextstate = BIT2;			//If the same move to next state
+		ready = 1'b0;
 	end else begin
 		nextstate <= BIT1;			//Else go back to the first bit and get ready for more data
-		match <= 0;
-		ready <= 1'b1;
+		match = 0;
+		ready = 1'b1;
 	end
 end
 
 BIT2: begin
 	if(DIGITS[1] == latchedData[1]) begin		//Checks the second bit
-		nextstate <= BIT3;			//If the same move to next state
-		ready <= 1'b0;
+		nextstate = BIT3;			//If the same move to next state
+		ready = 1'b0;
 	end else begin
 		nextstate <= BIT1;			//Else go back to the first bit and get ready for more data
-		match <= 0;
-		ready <= 1'b1;
+		match = 0;
+		ready = 1'b1;
 	end
 end
 
 BIT3: begin
 	if(DIGITS[2] == latchedData[2]) begin		//Checks the third bit
-		nextstate <= BIT4;			//If the same move to next state
-		ready <= 1'b0;
+		nextstate = BIT4;			//If the same move to next state
+		ready = 1'b0;
 	end else begin
 		nextstate <= BIT1;			//Else go back to the first bit and get ready for more data
-		match <= 0;
-		ready <= 1'b1;
+		match = 0;
+		ready = 1'b1;
 	end
 end
 
 BIT4: begin
 	if(DIGITS[3] == latchedData[3]) begin		//Checks the fourth bit
-		nextstate <= BIT5;			//If the same move to next state
-		ready <= 1'b0;
+		nextstate = BIT5;			//If the same move to next state
+		ready = 1'b0;
 	end else begin
 		nextstate <= BIT1;			//Else go back to the first bit and get ready for more data
-		match <= 0;
-		ready <= 1'b1;
+		match = 0;
+		ready = 1'b1;
 	end
 end
 
 BIT5: begin
 	if(DIGITS[4] == latchedData[4]) begin		//Checks the fifth bit
-		nextstate <= BIT6;			//If the same move to next state
-		ready <= 1'b0;
+		nextstate = BIT6;			//If the same move to next state
+		ready = 1'b0;
 	end else begin
 		nextstate <= BIT1;			//Else go back to the first bit and get ready for more data
-		match <= 0;
-		ready <= 1'b1;
+		match = 0;
+		ready = 1'b1;
 	end
 end
 
 BIT6: begin
 	if(DIGITS[5] == latchedData[5]) begin		//Checks the sixth bit
-		nextstate <= BIT7;			//If the same move to next state
-		ready <= 1'b0;
+		nextstate = BIT7;			//If the same move to next state
+		ready = 1'b0;
 	end else begin
-		nextstate <= BIT1;			//Else go back to the first bit and get ready for more data
-		match <= 0;
-		ready <= 1'b1;
+		nextstate = BIT1;			//Else go back to the first bit and get ready for more data
+		match = 0;
+		ready = 1'b1;
 	end
 end
 
 BIT7: begin
 	if(DIGITS[6] == latchedData[6]) begin		//Checks the seventh bit
-		nextstate <= BIT8;			//If the same move to next state
-		ready <= 1'b0;
+		nextstate = BIT8;			//If the same move to next state
+		ready = 1'b0;
 	end else begin
 		nextstate <= BIT1;			//Else go back to the first bit and get ready for more data
-		match <= 0;
-		ready <= 1'b1;
+		match = 0;
+		ready = 1'b1;
 	end
 end
 
 BIT8: begin
 	if(DIGITS[7] == latchedData[7]) begin		//Checks the eighth bit
-		nextstate <= BIT1;			//If the same move to the first state
-		match <= 1'b1;				//The sequencer matched the data to the sequence
-		ready <= 1'b1;
+		nextstate = BIT1;			//If the same move to the first state
+		match = 1'b1;				//The sequencer matched the data to the sequence
+		ready = 1'b1;
 	end else begin
-		nextstate <= BIT1;			//Else go back to the first bit and get ready for more data
-		match <= 0;
-		ready <= 1'b1;
+		nextstate = BIT1;			//Else go back to the first bit and get ready for more data
+		match = 0;
+		ready = 1'b1;
 	end
 end
 endcase
@@ -137,10 +137,10 @@ end
 //////////////////////////////////
 always_ff@(posedge clk) begin
 if (ready & sent) begin			//Latches new data if new data has been sent when it's ready to recieve
-	latchedData = data;
+	latchedData <= data;
 end
 
-state = nextstate;			//moves to the next state
+state <= nextstate;			//moves to the next state
 end
 
 always_ff@(posedge match) begin		//Writes MATCHED on the positive edge of match. This eliminated multiple writes in the combinational logic
