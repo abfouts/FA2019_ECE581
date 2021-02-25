@@ -47,14 +47,14 @@ $fwrite(write_file, "\n\nPROBLEM 1\n\n");
 clk = 0;
 
 #20
-r1 <= 0;
-r2 <= 0;
-r3 <= 0;
+r1 = 0;
+r2 = 0;
+r3 = 0;
 
 #10
 
 for(int i = 0; i < 25; i = i + 1) begin
-#10 {r1, r2, r3} <= $random;
+#10 {r1, r2, r3} = $random;
 end
 $fclose(write_file);
 #30 $finish;
